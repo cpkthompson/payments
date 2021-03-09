@@ -5,9 +5,42 @@
   <title>Payments</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-  <app-root></app-root>
+  <nav class="navbar is-dark">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-burger" href="/" class="navbar-item" style="font-weight:bold;">
+        Payments
+      </a>
+      <span class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="/" class="navbar-item">Search</a>
+          <a href="/" class="navbar-item">Index</a>
+          <a href="/" class="navbar-item">Results</a>
+          <a href="/" class="navbar-item">Case</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('.#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
 </body>
 </html>
